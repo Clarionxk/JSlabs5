@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function Pass(){
+            var name=document.getElementById("name").value;
+            localStorage.setItem("textvalue",name);
+
+            var num=document.getElementById("mobile").value;
+            localStorage.setItem("textvalue2",num);
+
+            var email=document.getElementById("email").value;
+            localStorage.setItem("textvalue3",email);
+
+            var col=document.getElementById("Gender").value;
+            localStorage.setItem("textvalue4",col);
+
+            var col=document.getElementById("Address").value;
+            localStorage.setItem("textvalue5",col);
+
+            return false;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="get" action="disp.html">
+<!--    <fieldset><legend> FORM</legend>-->
+        <table>
+            <tr><td>NAME</td><td><input type="text" name="name" id="name"  /></td></tr>
+            <tr><td>Mobile</td><td><input type="text" name="Mobile" id="mobile"  /></td></tr>
+            <tr><td>EMAIL</td><td><input type="text" name="email" id="email"  /></td></tr>
+            <tr><td>Address</td><td><input type="text" name="address" id="Address"  /></td></tr>
+
+            <div class="select">
+                <select name="Gender" id="Gender" required>
+                    <option selected disabled> Choose Gender </option> <br></br>
+                    <option id="mal" value="male">Male</option>
+                    <option id="fem" value="female">Female</option>
+
+                </select></div><br>
+
+
+
+
+            <tr><td></td><td><input type="submit" value="submit" onclick="Pass() , validate " /></td></tr>
+        </table>
+<!--    </fieldset>-->
+</form>
+
+
+</body>
+</html>
